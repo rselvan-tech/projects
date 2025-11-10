@@ -1,19 +1,26 @@
 
-### Attribution
-This work is a derivative of [Mumshad](https://github.com/ddometita/mmumshad-kubernetes-the-hard-way), used under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+### ⚖️ License and Attribution (CC BY-NC-SA 4.0)
 
-This adapted version is licensed under the identical [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+This tutorial is a **modified version** of the original developed by [Mumshad](https://github.com/ddometita/mmumshad-kubernetes-the-hard-way).
 
-# Kubernetes The Hard Way On VirtualBox
+The original work is used and attributed here under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**.
 
+This adapted version is also licensed under the **identical CC BY-NC-SA 4.0 license**.
 
-This tutorial is a modified version of the original developed by [Mumshad](https://github.com/ddometita/mmumshad-kubernetes-the-hard-way).
+***
 
-While the original one uses GCP as the platform to deploy kubernetes,  we use VirtualBox and Vagrant to deploy a cluster on a local machine. If you prefer the cloud version, refer to the original one [here](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+### 📝 Non-Commercial Use Justification
 
-Another difference is that we use Docker instead of containerd. There are a few other differences to the original and they are documented [here](docs/differences-to-original.md)
+This project is intended solely for personal development and educational practice (to learn Kubernetes and deployment skills). This work is strictly **non-commercial**. I am not selling the resulting configuration, documentation, or any derivative training based on it, and I am only sharing it freely with other individuals for learning purposes.
 
-> The results of this tutorial should not be viewed as production ready, and may receive limited support from the community, but don't let that stop you from learning!
+***
+
+# ⚙️ Changes to the Original Version
+
+* 3 Control plane nodes instead of 2.
+* Use **containerd** instead of Docker.
+* Use **Cilium** instead of Weave Net.
+* All component versions are changed to the latest stable versions available at the time of this implementation.
 
 ## Target Audience
 
