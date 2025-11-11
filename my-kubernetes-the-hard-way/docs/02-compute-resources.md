@@ -2,13 +2,24 @@
 
 Note: You must have VirtualBox and Vagrant configured at this point
 
-Download this github repository and cd into the vagrant folder
+### Get this project
 
-`git clone https://github.com/mmumshad/kubernetes-the-hard-way.git`
+You can browse or download this specific folder directly on GitHub:
+
+🔗 [my-kubernetes-the-hard-way](https://github.com/rselvan-tech/projects/tree/main/my-kubernetes-the-hard-way)
+
+Or clone the full repo:
+
+```bash
+git clone https://github.com/rselvan-tech/projects.git
+cd projects/my-kubernetes-the-hard-way
+
+
+### Run Vagrant
 
 CD into vagrant directory
 
-`cd kubernetes-the-hard-way\vagrant`
+`cd vagrant`
 
 Run Vagrant up
 
@@ -17,7 +28,7 @@ Run Vagrant up
 
 This does the below:
 
-- Deploys 5 VMs - 2 Master, 2 Worker and 1 Loadbalancer with the name 'kubernetes-ha-* '
+- Deploys 6 VMs - 3 Master, 2 Worker and 1 Loadbalancer with the name 'kubernetes-ha-* '
     > This is the default settings. This can be changed at the top of the Vagrant file
 
 - Set's IP addresses in the range 192.168.5
@@ -36,7 +47,7 @@ This does the below:
 - Add's a DNS entry to each of the nodes to access internet
     > DNS: 8.8.8.8
 
-- Install's Docker on Worker nodes
+- Install's Containerd on Worker nodes
 - Runs the below command on all nodes to allow for network forwarding in IP Tables.
   This is required for kubernetes networking to function correctly.
     > sysctl net.bridge.bridge-nf-call-iptables=1
@@ -69,8 +80,8 @@ Vagrant generates a private key for each of these VMs. It is placed under the .v
 - Ensure VMs are assigned the above IP addresses
 - Ensure you can SSH into these VMs using the IP and private keys
 - Ensure the VMs can ping each other
-- Ensure the worker nodes have Docker installed on them. Version: 18.06
-  > command `sudo docker version`
+- Ensure the worker nodes have Containerd installed on them.
+  > command `sudo ctr version`
 
 ## Troubleshooting Tips
 
